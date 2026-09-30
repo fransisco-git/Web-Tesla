@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TESLA</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="WebTesla.css">
+<link rel="stylesheet" href="megamenuCSS.css">
+
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <a href="#" class="logo">
+    <img src="images/TeslaLogo.png" alt="Tesla">
+</a>
+
+        <nav class="nav-menu">
+    <a href="#" data-menu="vehicles">Vehicles</a>
+    <a href="#" data-menu="energy">Energy</a>
+    <a href="#" data-menu="charging">Charging</a>
+    <a href="#" data-menu="discover">Discover</a>
+    <a href="#" data-menu="shop">Shop</a>
+</nav>
+
+        <div class="nav-icons">
+
+    <!-- Help -->
+    <button class="icon-btn" aria-label="Help">
+
+        <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"></circle>
+
+            <path d="M9.5 9a2.5 2.5 0 1 1 4.7 1.2c-.8 1.1-2.2 1.4-2.2 3"></path>
+
+            <circle cx="12" cy="17" r="0.7"
+                    fill="currentColor"
+                    stroke="none"></circle>
+        </svg>
+
+    </button>
+
+
+    <!-- Globe -->
+    <button class="icon-btn" aria-label="Language">
+
+        <svg viewBox="0 0 24 24">
+
+            <circle cx="12" cy="12" r="10"></circle>
+
+            <ellipse
+                cx="12"
+                cy="12"
+                rx="4.5"
+                ry="10">
+            </ellipse>
+
+            <path d="M2 12h20"></path>
+
+            <path d="M4 7.5h16"></path>
+
+            <path d="M4 16.5h16"></path>
+
+        </svg>
+
+    </button>
+
+
+    <!-- Account -->
+    <button class="icon-btn" aria-label="Account">
+
+        <svg viewBox="0 0 24 24">
+
+            <!-- lingkaran luar -->
+            <circle cx="12" cy="12" r="10"></circle>
+
+            <!-- kepala -->
+            <circle cx="12" cy="9" r="3"></circle>
+
+            <!-- badan -->
+            <path d="M6.5 19c.8-3 2.7-4.5 5.5-4.5s4.7 1.5 5.5 4.5">
+            </path>
+
+        </svg>
+
+    </button>
+
+</div>
+
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+    <main>
+
+        <section class="hero">
+
+    <!-- SLIDES -->
+    <div class="hero-slider">
+
+        <!-- SLIDE 1 -->
+        <div class="hero-slide active">
+
+            <img
+                src="images/Tesla Y.avif"
+                alt="Model Y"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 2 -->
+        <div class="hero-slide">
+
+            <img
+                src="images/Tesla 3.avif"
+                alt="Model 3"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+        <div class="hero-slide">
+
+            <img
+                src="images/Tesla Y L Premium.avif"
+                alt="Model Y L Premium"
+            >
+
+        </div>
+
+    </div>
+
+
+    <!-- OVERLAY -->
+    <div class="hero-overlay"></div>
+
+
+    <!-- TEXT -->
+    <div class="hero-content">
+
+        <h1 id="modelName">
+            Model Y
+        </h1>
+
+        <p id="modelSubtitle">
+            The Future of Electric Driving
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#" class="btn btn-primary">
+                Order Now
+            </a>
+
+            <a href="#" class="btn btn-secondary">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEFT BUTTON -->
+    <button
+        class="slider-btn slider-left"
+        id="prev">
+        <span>‹</span>
+
+    </button>
+
+
+    <!-- RIGHT BUTTON -->
+    <button
+        class="slider-btn slider-right"
+        id="next">
+        <span>›</span>
+
+    </button>
+
+
+    <!-- DOTS -->
+    <div class="slider-dots">
+
+        <span
+            class="dot active"
+            data-slide="0">
+        </span>
+
+        <span
+            class="dot"
+            data-slide="1">
+        </span>
+
+        <span
+            class="dot"
+            data-slide="2">
+        </span>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FULL SELF-DRIVING
+========================= -->
+
+<section class="fsd-section">
+
+    <div class="container-fluid">
+
+        <div class="row fsd-card">
+
+            <!-- BAGIAN KIRI -->
+            <div class="col-lg-5 fsd-content">
+
+                <h2 class="fsd-title">
+    Full <span>Self-Driving</span><br>
+    <span>(Supervised)</span>
+</h2>
+
+                <p class="fsd-description">
+                    Makes every drive easier. Subscribe for $99/mo.¹
+                </p>
+
+
+                <!-- STATISTIK -->
+                <div class="row fsd-stats">
+
+                    <div class="col-5">
+                        <h3>7x</h3>
+                        <p>Fewer Collisions</p>
+                    </div>
+
+                    <div class="col-7">
+                        <h3 id="milesDriven">0</h3>
+                        <p>Miles Driven</p>
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <div class="fsd-buttons">
+
+                    <button class="fsd-btn fsd-dark">
+                        Schedule Demo
+                    </button>
+
+                    <button class="fsd-btn fsd-light">
+                        Learn More
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BAGIAN KANAN -->
+            <div class="col-lg-7 fsd-media">
+
+    <div class="tesla-video">
+
+    <video
+        id="fsdVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src="images/FullSelfDriving.webm" type="video/webm">
+        Browser kamu tidak mendukung video.
+    </video>
+
+
+    <!-- VIDEO CONTROLS -->
+    <div class="video-controls">
+
+        <!-- PLAY / PAUSE -->
+        <button
+            class="video-control-btn"
+            id="playPauseBtn"
+            onclick="toggleVideo()"
+        >
+            ▶
+        </button>
+
+
+        <!-- PROGRESS -->
+        <input
+            type="range"
+            id="videoProgress"
+            value="0"
+            min="0"
+            max="100"
+            step="0.1"
+        >
+
+
+        <!-- TIME -->
+        <span id="videoTime">
+            0:00
+        </span>
+
+
+        <!-- MUTE -->
+        <button
+            class="video-control-btn"
+            id="muteBtn"
+            onclick="toggleMute()"
+        >
+            🔇
+        </button>
+
+
+        <!-- FULLSCREEN -->
+        <button
+            class="video-control-btn"
+            onclick="fullscreenVideo()"
+        >
+            ⛶
+        </button>
+
+    </div>
+
+</div>
+
+</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==============================
+     TESLA VEHICLE CAROUSEL
+============================== -->
+
+<section class="vehicle-section">
+
+    <div class="vehicle-carousel">
+
+    <div class="vehicle-track">
+
+        <div class="vehicle-card">
+            <img src="images/Model Y L Premium.avif" alt="Model Y">
+
+            <div class="vehicle-overlay"></div>
+
+            <div class="vehicle-info">
+
+                <div>
+                    <h5>Long Wheelbase Midsize SUV</h5>
+                </div>
+
+                <div>
+                    <h2>Model Y L Premium</h2>
+                    <p>Starting at $61,990²</p>
+
+                    <div class="vehicle-buttons">
+                        <button class="vehicle-btn blue">
+                            Order Now
+                        </button>
+
+                        <button class="vehicle-btn white">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <img src="images/Model 3.avif" alt="Model 3">
+
+            <div class="vehicle-overlay"></div>
+
+            <div class="vehicle-info">
+
+                <div>
+                    <h5>Electric Sedan</h5>
+                </div>
+
+                <div>
+                    <h2>Model 3</h2>
+                    <p>Lease From $419/mo</p>
+
+                    <div class="vehicle-buttons">
+                        <button class="vehicle-btn blue">
+                            Order Now
+                        </button>
+
+                        <button class="vehicle-btn white">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <img src="images/CyberTruck.avif" alt="Cybertruck">
+
+            <img src="images/cybertruck-wordmar.png" alt="Cybertruck"class="cybertruck-logo">
+
+            <div class="vehicle-overlay"></div>
+
+            <div class="vehicle-info">
+
+                <div>
+                    <h5>Electric Truck</h5>
+                </div>
+
+                <div>
+                    <p>Lease From $1,129/mo</p>
+
+                    <div class="vehicle-buttons">
+                        <button class="vehicle-btn blue">
+                            Order Now
+                        </button>
+
+                        <button class="vehicle-btn white">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="vehicle-card">
+
+            <img src="images/Vehicle.avif" alt="Tesla Certified">
+
+            <div class="vehicle-overlay"></div>
+
+            <div class="vehicle-info">
+
+                <div>
+                    <h5>Pre-Owned Vehicles</h5>
+                </div>
+
+                <div>
+                    <h2>Certified</h2>
+                    <p>Fully inspected Tesla vehicles</p>
+
+                    <div class="vehicle-buttons">
+                        <button class="vehicle-btn blue">
+                            View Inventory
+                        </button>
+
+                        <button class="vehicle-btn white">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <button
+        class="vehicle-arrow vehicle-prev"
+        onclick="vehiclePrev()">
+        ‹
+    </button>
+
+    <button
+        class="vehicle-arrow vehicle-next"
+        onclick="vehicleNext()">
+        ›
+    </button>
+
+</div>
+
+
+    <!-- DOT -->
+    <div class="vehicle-dots">
+
+        <span
+            class="vehicle-dot active"
+            onclick="vehicleGoTo(0)">
+        </span>
+
+        <span
+            class="vehicle-dot"
+            onclick="vehicleGoTo(1)">
+        </span>
+
+        <span
+            class="vehicle-dot"
+            onclick="vehicleGoTo(2)">
+        </span>
+
+        <span
+            class="vehicle-dot"
+            onclick="vehicleGoTo(3)">
+        </span>
+
+    </div>
+
+</section>
+
+        <!-- ================= PRODUCT SECTION ================= -->
+
+        <section class="products" id="energy">
+
+            <div class="section-title">
+                <h2>Electric Vehicles</h2>
+
+                <p>
+                    Experience powerful performance with zero emissions.
+                </p>
+            </div>
+
+
+            <div class="product-grid">
+
+                <!-- TESLA S -->
+                <article class="product-card">
+
+                    <img
+                        src="images/Model S.avif"
+                        alt="Electric sedan"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>Tesla S</h3>
+
+                        <p>
+                            Performance electric sedan
+                        </p>
+
+                        <div class="vehicle-specs">
+
+    <div class="spec-item">
+        <div class="spec-icon">⚡</div>
+        <div>
+            <strong>3.1s</strong>
+            <span>0-60 mph</span>
+        </div>
+    </div>
+
+    <div class="spec-item">
+        <div class="spec-icon">🔋</div>
+        <div>
+            <strong>402 mi</strong>
+            <span>Range</span>
+        </div>
+    </div>
+
+</div>
+
+                        <div class="product-buttons">
+
+                            <a href="#" class="small-btn dark">
+                                Order
+                            </a>
+
+                            <a href="#" class="small-btn light">
+                                Details
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TESLA X -->
+                <article class="product-card">
+
+                    <img
+                        src="images/Model X.avif"
+                        alt="Electric SUV"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>Tesla X</h3>
+
+                        <p>
+                            Premium electric SUV
+                        </p>
+
+                        <div class="vehicle-specs">
+
+    <div class="spec-item">
+        <div class="spec-icon">⚡</div>
+        <div>
+            <strong>3.8s</strong>
+            <span>0-60 mph</span>
+        </div>
+    </div>
+
+    <div class="spec-item">
+        <div class="spec-icon">🔋</div>
+        <div>
+            <strong>335 mi</strong>
+            <span>Range</span>
+        </div>
+    </div>
+
+</div>
+
+                        <div class="product-buttons">
+
+                            <a href="#" class="small-btn dark">
+                                Order
+                            </a>
+
+                            <a href="#" class="small-btn light">
+                                Details
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ROADSTER -->
+                <article class="product-card">
+
+                    <img
+                        src="images/Roadster.avif"   
+                        alt="Electric sports car"
+                    >
+
+                    <div class="product-info">
+
+                        <h3>Tesla Roadster</h3>
+
+                        <p>
+                            High-performance electric sports car
+                        </p>
+
+                        <div class="vehicle-specs">
+
+    <div class="spec-item">
+        <div class="spec-icon">⚡</div>
+        <div>
+            <strong>1.9s</strong>
+            <span>0-60 mph</span>
+        </div>
+    </div>
+
+    <div class="spec-item">
+        <div class="spec-icon">🔋</div>
+        <div>
+            <strong>620 mi</strong>
+            <span>Range</span>
+        </div>
+    </div>
+
+</div>
+
+                        <div class="product-buttons">
+
+                            <a href="#" class="small-btn dark">
+                                Order
+                            </a>
+
+                            <a href="#" class="small-btn light">
+                                Details
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CHARGING ================= -->
+
+        <section class="charging">
+
+    <div class="charging-overlay"></div>
+
+    <div class="charging-content">
+
+        <div class="charging-label">
+            TESLA SUPERCHARGING
+        </div>
+
+    <div class="charging-icon">
+    <span>⚡</span>
+</div>
+
+        <h2>Charge Anywhere</h2>
+
+        <p>
+            Fast, simple and convenient charging
+            for your electric vehicle.
+        </p>
+
+        <div class="charging-buttons">
+            <button class="charging-primary">
+                Explore Charging
+            </button>
+
+            <button class="charging-secondary">
+                Find a Charger
+            </button>
+        </div>
+
+    </div>
+
+    <!-- INFO BAWAH -->
+     <div class="charging-line-animation">
+    <span></span>
+</div>
+    <div class="charging-stats">
+
+        <div class="charging-stat">
+            <strong>50,000+</strong>
+            <span>Superchargers</span>
+        </div>
+
+        <div class="charging-line"></div>
+
+        <div class="charging-stat">
+            <strong>Global</strong>
+            <span>Charging Network</span>
+        </div>
+
+        <div class="charging-line"></div>
+
+        <div class="charging-stat">
+            <strong>24/7</strong>
+            <span>Access</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+        <!-- ================= DISCOVER ================= -->
+
+        <section class="discover" id="discover">
+
+            <div class="discover-text">
+
+                <h2>Built for the Future</h2>
+
+                <p>
+                    Advanced technology, intelligent design and
+                    sustainable performance come together in one
+                    electric vehicle.
+                </p>
+
+                <a href="#" class="learn-link">
+                    Learn More →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= COOKIE POPUP ================= -->
+
+    <div class="cookie-box" id="cookieBox">
+
+        <div class="cookie-popup" id="cookiePopup">
+
+    <div class="cookie-text">
+        <h2>Help Us Improve Our Website</h2>
+
+        <p>
+            We use cookies and data from your device to improve
+            website performance and your experience.
+        </p>
+    </div>
+
+    <div class="cookie-buttons">
+        <button class="accept-btn" id="acceptCookies">
+            Accept
+        </button>
+
+        <button class="reject-btn" id="rejectCookies">
+            Reject
+        </button>
+    </div>
+
+</div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+    <div class="footer-logo">
+        TESLA
+    </div>
+
+    <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+        <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-copyright">
+        © 2026 Tesla Motors. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+    /* ======================================
+       TESLA HERO SLIDER
+    ====================================== */
+
+    const slides =
+        document.querySelectorAll(".hero-slide");
+
+    const dots =
+        document.querySelectorAll(".dot");
+
+    const nextButton =
+        document.getElementById("next");
+
+    const prevButton =
+        document.getElementById("prev");
+
+    const modelName =
+        document.getElementById("modelName");
+
+    const modelSubtitle =
+        document.getElementById("modelSubtitle");
+
+
+    let currentSlide = 0;
+
+
+    /* DATA MODEL */
+
+    const models = [
+
+        {
+            name: "Model Y",
+            subtitle: "The Future of Electric Driving"
+        },
+
+        {
+            name: "Model 3",
+            subtitle: "Electric Performance for Everyone"
+        },
+
+        {
+            name: "Model X",
+            subtitle: "Power. Technology. Freedom."
+        }
+
+    ];
+
+
+    /* ======================================
+       CHANGE SLIDE
+    ====================================== */
+
+    function showSlide(index) {
+
+        if (index >= slides.length) {
+
+            currentSlide = 0;
+
+        } else if (index < 0) {
+
+            currentSlide =
+                slides.length - 1;
+
+        } else {
+
+            currentSlide = index;
+
+        }
+
+
+        /* SLIDE */
+
+        slides.forEach(function(slide, i) {
+
+            slide.classList.remove("active");
+
+            if (i === currentSlide) {
+
+                slide.classList.add("active");
+
+            }
+
+        });
+
+
+        /* DOT */
+
+        dots.forEach(function(dot, i) {
+
+            dot.classList.remove("active");
+
+            if (i === currentSlide) {
+
+                dot.classList.add("active");
+
+            }
+
+        });
+
+
+        /* TEXT */
+
+        modelName.textContent =
+            models[currentSlide].name;
+
+        modelSubtitle.textContent =
+            models[currentSlide].subtitle;
+
+    }
+
+
+    /* ======================================
+       NEXT
+    ====================================== */
+
+    nextButton.addEventListener(
+        "click",
+        function() {
+
+            showSlide(currentSlide + 1);
+
+        }
+    );
+
+
+    /* ======================================
+       PREVIOUS
+    ====================================== */
+
+    prevButton.addEventListener(
+        "click",
+        function() {
+
+            showSlide(currentSlide - 1);
+
+        }
+    );
+
+
+    /* ======================================
+       DOT CLICK
+    ====================================== */
+
+    dots.forEach(function(dot, index) {
+
+        dot.addEventListener(
+            "click",
+            function() {
+
+                showSlide(index);
+
+            }
+        );
+
+    });
+
+
+    /* ======================================
+       AUTO SLIDE
+    ====================================== */
+
+    let autoSlide =
+        setInterval(function() {
+
+            showSlide(currentSlide + 1);
+
+        }, 6000);
+
+
+    /* ======================================
+       RESET AUTO SLIDE
+    ====================================== */
+
+    function resetAutoSlide() {
+
+        clearInterval(autoSlide);
+
+        autoSlide =
+            setInterval(function() {
+
+                showSlide(currentSlide + 1);
+
+            }, 6000);
+
+    }
+
+
+    nextButton.addEventListener(
+        "click",
+        resetAutoSlide
+    );
+
+
+    prevButton.addEventListener(
+        "click",
+        resetAutoSlide
+    );
+
+
+    dots.forEach(function(dot) {
+
+        dot.addEventListener(
+            "click",
+            resetAutoSlide
+        );
+
+    });
+
+
+</script>
+
+<script>
+    const cookiePopup = document.getElementById("cookiePopup");
+    const acceptCookies = document.getElementById("acceptCookies");
+    const rejectCookies = document.getElementById("rejectCookies");
+
+    // Cek apakah user sudah memilih sebelumnya
+    const cookieChoice = localStorage.getItem("cookieChoice");
+
+    // Kalau belum memilih, tampilkan popup
+    if (!cookieChoice) {
+        setTimeout(() => {
+            cookiePopup.classList.add("show");
+        }, 500);
+    }
+
+    // Tombol Accept
+    acceptCookies.addEventListener("click", () => {
+        cookiePopup.classList.remove("show");
+
+        localStorage.setItem("cookieChoice", "accepted");
+    });
+
+    // Tombol Reject
+    rejectCookies.addEventListener("click", () => {
+        cookiePopup.classList.remove("show");
+
+        localStorage.setItem("cookieChoice", "rejected");
+    });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="WebTesla.js"></script>
+<script src="megamenuJS.js"></script>
+
+</body>
+</html>

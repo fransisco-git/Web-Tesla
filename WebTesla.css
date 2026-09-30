@@ -1,0 +1,2434 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #171a20;
+    background: #ffffff;
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+    height: 64px;
+    width: 100%;
+
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 52px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 220px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+    display: block;
+}
+
+
+/* NAV MENU */
+
+.nav-menu {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    flex: 1;
+}
+
+
+.nav-menu a {
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #171a20;
+    text-decoration: none;
+}
+
+
+.nav-menu a:hover {
+    color: #3e6ae1;
+}
+
+
+/* NAV ICONS */
+
+/* =========================================
+   NAVIGATION ICONS
+========================================= */
+
+.nav-icons {
+    width: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 14px;
+}
+
+
+/* BUTTON */
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    color: #171a20;
+
+    transition: background 0.2s ease;
+}
+
+
+/* SVG */
+
+.icon-btn svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    display: block;
+}
+
+
+/* HOVER */
+
+.icon-btn:hover {
+    background: #f2f2f2;
+}
+
+/* HOVER BUTTON */
+.btn-order,
+.btn-details {
+    transition: all 0.25s ease;
+}
+
+.btn-order:hover {
+    transform: translateY(-2px);
+    background: #2b2f35;
+}
+
+.btn-details:hover {
+    transform: translateY(-2px);
+    background: #f0f0f0;
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+/* ==========================================
+   HERO SLIDER
+========================================== */
+
+.hero {
+    height: calc(100vh - 64px);
+
+    min-height: 650px;
+
+    margin-top: 64px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #eeeeee;
+}
+
+.hero-image {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ==========================================
+   SLIDER
+========================================== */
+
+.hero-slider {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================
+   SLIDE
+========================================== */
+
+.hero-slide {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transform: scale(1.04);
+
+    transition:
+        opacity 1s ease-in-out,
+        transform 1.2s ease-in-out;
+
+    pointer-events: none;
+}
+
+
+/* SLIDE AKTIF */
+
+.hero-slide.active {
+    opacity: 1;
+
+    transform: scale(1);
+
+    pointer-events: auto;
+
+    z-index: 1;
+}
+
+
+/* ==========================================
+   GAMBAR MOBIL
+========================================== */
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+}
+
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.12),
+            rgba(0, 0, 0, 0.02) 45%,
+            rgba(0, 0, 0, 0.15)
+        );
+}
+
+
+/* ==========================================
+   HERO TEXT
+========================================== */
+
+.hero-content {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 70px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    text-align: center;
+
+    color: white;
+
+    pointer-events: none;
+}
+
+
+.hero-content h1 {
+    font-size: 52px;
+
+    font-weight: 500;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+
+.hero-subtitle,
+.hero-content p {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.hero-buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    pointer-events: auto;
+}
+
+
+.btn {
+    width: 255px;
+
+    padding: 14px 20px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+
+.btn-primary {
+    background: #3e6ae1;
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background: #345ac4;
+}
+
+
+.btn-secondary {
+    background: white;
+
+    color: #171a20;
+}
+
+
+.btn-secondary:hover {
+    background: #eeeeee;
+}
+
+
+/* =========================
+   SLIDER ARROWS
+========================= */
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 56px;
+    height: 56px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: rgba(255, 255, 255, 0.92);
+    color: #171a20;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    z-index: 20;
+
+    transition: 
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.slider-left {
+    left: 36px;
+}
+
+.slider-right {
+    right: 36px;
+}
+
+.slider-btn span {
+    font-size: 38px;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.slider-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.slider-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+
+.slider-btn:hover {
+    background: white;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+
+.slider-left {
+    left: 35px;
+}
+
+
+.slider-right {
+    right: 35px;
+}
+
+
+/* ==========================================
+   DOTS
+========================================== */
+
+.slider-dots {
+    position: absolute;
+
+    z-index: 10;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 9px;
+}
+
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.dot.active {
+    background: white;
+
+    transform: scale(1.3);
+}
+
+
+/* DARK OVERLAY */
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.05) 50%,
+            rgba(0, 0, 0, 0.15)
+        );
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: white;
+
+    margin-top: 65px;
+}
+
+
+.hero-content h1 {
+    font-size: 54px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    text-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+
+.hero-subtitle {
+    font-size: 20px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* HERO BUTTONS */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    justify-content: center;
+}
+
+
+.btn {
+    width: 220px;
+
+    padding: 14px 20px;
+
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.btn-primary {
+    background: #3e6ae1;
+
+    color: white;
+}
+
+
+.btn-primary:hover {
+    background: #345ac4;
+}
+
+
+.btn-secondary {
+    background: white;
+
+    color: #171a20;
+}
+
+
+.btn-secondary:hover {
+    background: #eeeeee;
+}
+
+
+/* ==================================================
+   SLIDER BUTTONS
+================================================== */
+
+.slider-btn {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #171a20;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition: 0.2s;
+}
+
+
+.slider-btn:hover {
+    background: white;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+
+.slider-left {
+    left: 30px;
+}
+
+
+.slider-right {
+    right: 30px;
+}
+
+
+/* ==================================================
+   SLIDER DOTS
+================================================== */
+
+.slider-dots {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 9px;
+
+    z-index: 5;
+}
+
+
+.dot {
+    width: 9px;
+    height: 9px;
+
+    background: rgba(255, 255, 255, 0.5);
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+.dot.active {
+    background: white;
+
+    transform: scale(1.2);
+}
+
+/* ==================================================
+   FULL SELF-DRIVING SECTION
+================================================== */
+
+.fsd-section {
+    width: 100%;
+    padding: 58px 3.1% 40px;
+    background: #ffffff;
+}
+
+.fsd-title {
+    font-size: 52px;
+    line-height: 1.15;
+    font-weight: 600;
+    letter-spacing: -2px;
+    color: #222730;
+}
+
+.fsd-title span {
+    background: linear-gradient(
+        90deg,
+        #17233f 0%,
+        #3968c6 45%,
+        #2e3c56 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* CARD */
+
+.fsd-card {
+    width: 100%;
+    min-height: 600px;
+
+    margin: 0;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #f5f5f5;
+}
+
+
+/* ==================================================
+   LEFT CONTENT
+================================================== */
+
+.fsd-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 50px 60px;
+}
+
+
+/* TITLE */
+
+.fsd-content h2 {
+    margin: 0;
+
+    font-size: 48px;
+    line-height: 1.12;
+
+    font-weight: 600;
+
+    letter-spacing: -1.5px;
+
+    color: #171a20;
+}
+
+.fsd-content h2 span {
+    color: #3e6ae1;
+}
+
+
+/* DESCRIPTION */
+
+.fsd-description {
+    margin-top: 6px;
+    margin-bottom: 42px;
+
+    font-size: 20px;
+    line-height: 1.4;
+
+    color: #3e4b5c;
+}
+
+
+/* ==================================================
+   STATISTICS
+================================================== */
+
+.fsd-stats {
+    margin-bottom: 40px;
+}
+
+.fsd-stats h3 {
+    margin: 0 0 5px;
+
+    font-size: 40px;
+    line-height: 1;
+
+    font-weight: 500;
+
+    color: #171a20;
+
+    white-space: nowrap;
+}
+
+.fsd-stats p {
+    margin: 0;
+
+    font-size: 20px;
+
+    color: #3e4b5c;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.fsd-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.fsd-btn {
+    width: 250px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* DARK BUTTON */
+
+.fsd-dark {
+    background: #171a20;
+    color: #ffffff;
+}
+
+
+/* LIGHT BUTTON */
+
+.fsd-light {
+    background: #ffffff;
+    color: #171a20;
+}
+
+
+/* HOVER */
+
+.fsd-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+/* ==================================================
+   RIGHT IMAGE
+================================================== */
+
+.fsd-media {
+    position: relative;
+
+    min-height: 600px;
+
+    padding: 0 !important;
+
+    overflow: hidden;
+}
+
+.fsd-media video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* Efek sedikit smooth saat hover */
+
+.fsd-media:hover video {
+    transform: scale(1.015);
+}
+
+
+/* ==================================================
+   VIDEO TEXT
+================================================== */
+
+.fsd-video-text {
+    position: absolute;
+
+    left: 50%;
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 991px) {
+
+    .fsd-section {
+        padding: 40px 20px;
+    }
+
+    .fsd-content {
+        padding: 45px 35px;
+    }
+
+    .fsd-content h2 {
+        font-size: 42px;
+    }
+
+    .fsd-media {
+        min-height: 450px;
+    }
+
+    .fsd-stats h3 {
+        font-size: 32px;
+    }
+
+    .fsd-stats p {
+        font-size: 17px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .fsd-section {
+        padding: 25px 12px;
+    }
+
+    .fsd-content {
+        padding: 35px 25px;
+    }
+
+    .fsd-content h2 {
+        font-size: 35px;
+    }
+
+    .fsd-description {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .fsd-stats h3 {
+        font-size: 26px;
+    }
+
+    .fsd-stats p {
+        font-size: 15px;
+    }
+
+    .fsd-buttons {
+        flex-direction: column;
+    }
+
+    .fsd-btn {
+        width: 100%;
+    }
+
+    .fsd-media {
+        min-height: 350px;
+    }
+
+    .fsd-video-text {
+        font-size: 16px;
+    }
+}
+
+
+/* ==================================================
+   PRODUCTS
+================================================== */
+
+.products {
+    padding: 90px 7%;
+
+    background: #ffffff;
+}
+
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+
+.section-title h2 {
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+
+.section-title p {
+    color: #5c5e62;
+
+    font-size: 17px;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.product-card {
+    background: #f5f5f5;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s,
+        box-shadow 0.3s;
+}
+
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.12);
+}
+
+
+.product-card img {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.product-info {
+    padding: 25px;
+}
+
+
+.product-info h3 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+
+.product-info p {
+    color: #5c5e62;
+
+    margin-bottom: 20px;
+}
+
+
+/* PRODUCT BUTTONS */
+
+.product-buttons {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.small-btn {
+    text-align: center;
+
+    text-decoration: none;
+
+    padding: 11px 25px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    flex: 1;
+}
+
+
+.small-btn.dark {
+    background: #171a20;
+
+    color: white;
+}
+
+
+.small-btn.light {
+    background: white;
+
+    color: #171a20;
+
+    border: 1px solid #d0d0d0;
+}
+
+
+/* ==================================================
+   CHARGE ANYWHERE
+================================================== */
+
+.charging {
+    position: relative;
+
+    width: 100%;
+    height: 720px;
+
+    background-image: url("images/ChargerStation.jpg");
+
+    background-size: cover;
+
+    animation: chargingBackground 5s ease-in-out infinite alternate;
+
+    /* Fokus gambar ke mobil */
+    background-position: center center;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center; 
+}
+
+@keyframes chargingBackground {
+
+    from {
+        background-size: 100%;
+    }
+
+    to {
+        background-size: 106%;
+    }
+}
+
+.charging-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   GRADIENT OVERLAY
+================================================== */
+
+.charging-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.42) 38%,
+            rgba(0, 0, 0, 0.12) 70%,
+            rgba(0, 0, 0, 0.20) 100%
+        );
+}
+
+
+/* ==================================================
+   CONTENT
+================================================== */
+
+.charging-content {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding-left: 80px;
+
+    color: white;
+
+    animation: chargingContentIn 1s ease forwards;
+}
+
+
+/* ==================================================
+   ICON
+================================================== */
+
+.charging-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 0 0 0 rgba(255, 255, 255, 0.2);
+
+    animation: chargingPulse 2.5s infinite;
+}
+
+.charging-icon span {
+    font-size: 27px;
+
+    filter:
+        drop-shadow(0 0 8px rgba(255, 200, 80, 0.7));
+}
+
+@keyframes chargingPulse {
+
+    0% {
+        box-shadow:
+            0 0 0 0 rgba(255, 255, 255, 0.25);
+    }
+
+    70% {
+        box-shadow:
+            0 0 0 12px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow:
+            0 0 0 0 rgba(255, 255, 255, 0);
+    }
+
+}
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.charging-content h2 {
+    font-size: clamp(48px, 5vw, 64px);
+
+    line-height: 1.05;
+
+    font-weight: 600;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ==================================================
+   DESCRIPTION
+================================================== */
+
+.charging-content p {
+    margin-top: 22px;
+    margin-bottom: 34px;
+
+    max-width: 520px;
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.charging-buttons {
+    display: flex;
+
+    gap: 14px;
+}
+
+
+.charging-buttons button {
+    height: 56px;
+
+    min-width: 200px;
+
+    padding: 0 28px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* PRIMARY */
+
+.charging-primary {
+    border: none;
+
+    background: white;
+
+    color: #171a20;
+}
+
+
+.charging-primary:hover {
+    transform: translateY(-3px);
+
+    background: #f1f1f1;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* SECONDARY */
+
+.charging-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    backdrop-filter: blur(8px);
+}
+
+
+.charging-secondary:hover {
+    transform: translateY(-3px);
+
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.charging-primary,
+.charging-secondary {
+    position: relative;
+    overflow: hidden;
+}
+
+.charging-primary::after,
+.charging-secondary::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+.charging-primary:hover::after,
+.charging-secondary:hover::after {
+    left: 140%;
+}
+
+
+/* ==================================================
+   STATS
+================================================== */
+
+.charging-stats {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 38px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 14px 24px;
+
+    border-radius: 12px;
+
+    background: rgba(20, 22, 26, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+
+.charging-stat {
+    min-width: 120px;
+
+    display: flex;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.charging-stat + .charging-stat {
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    padding-left: 28px;
+}
+
+.charging-stat strong {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.charging-stat span {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+
+.charging-line-animation {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    height: 5px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    overflow: hidden;
+}
+
+.charging-line-animation span {
+    position: absolute;
+
+    left: -20%;
+
+    width: 20%;
+
+    height: 100%;
+
+    background:     rgba(201, 62, 62, 0.649);
+
+    box-shadow:
+        0 0 20px rgba(255, 254, 254, 0.9);
+
+    animation: chargingLine 3s linear infinite;
+}
+
+@keyframes chargingLine {
+
+    from {
+        left: -20%;
+    }
+
+    to {
+        left: 100%;
+    }
+
+}
+
+
+/* ==================================================
+   ANIMATION
+================================================== */
+
+@keyframes chargingContentIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* ==================================================
+   DISCOVER
+================================================== */
+
+.discover {
+    min-height: 500px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 70px 20px;
+
+    background: #f5f5f5;
+
+    text-align: center;
+}
+
+
+.discover-text {
+    max-width: 700px;
+}
+
+
+.discover-text h2 {
+    font-size: 45px;
+
+    margin-bottom: 20px;
+}
+
+
+.discover-text p {
+    color: #5c5e62;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+.learn-link {
+    color: #171a20;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   COOKIE POPUP
+========================= */
+
+.cookie-popup {
+    position: fixed;
+    z-index: 1000;
+
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%) translateY(30px);
+
+    width: min(1038px, calc(100% - 40px));
+    padding: 28px 32px;
+
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(10px);
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.5s;
+}
+
+/* Saat popup ditampilkan */
+.cookie-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.cookie-text {
+    flex: 1;
+}
+
+.cookie-text h2 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    font-weight: 600;
+    color: #171a20;
+}
+
+.cookie-text p {
+    margin: 0;
+
+    font-size: 16px;
+    line-height: 1.5;
+    color: #5c5e62;
+}
+
+/* Tombol */
+.cookie-buttons {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.cookie-buttons button {
+    min-width: 120px;
+    height: 50px;
+
+    border: none;
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.cookie-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.accept-btn {
+    background: #171a20;
+    color: white;
+}
+
+.reject-btn {
+    background: #eeeeee;
+    color: #171a20;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    position: relative;
+    width: 100%;
+    background: #f5f5f5;
+    text-align: center;
+    padding: 70px 20px 35px;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Logo */
+.footer-logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 24px;
+    color: #171a20;
+}
+
+/* Links */
+.footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 28px;
+}
+
+.footer-links a {
+    position: relative;
+    color: #5c5e62;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: #171a20;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #171a20;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Copyright */
+.footer-copyright {
+    font-size: 12px;
+    color: #777;
+}
+
+/* =========================================
+   TESLA VIDEO
+========================================= */
+
+.tesla-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    overflow: hidden;
+    background: #000;
+}
+
+.tesla-video video {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.tesla-video .fsd-video-text {
+    position: absolute;
+
+    left: 50%;
+    bottom: 55px;
+
+    transform: translateX(-50%);
+
+    color: white;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.8);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   TESLA VIDEO CONTROLS
+========================================= */
+
+.video-controls {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 55px;
+
+    padding: 0 12px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    /* transparan seperti Tesla */
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0)
+    );
+
+    z-index: 20;
+
+    opacity: 1;
+}
+
+
+/* =========================================
+   PLAY BUTTON
+========================================= */
+
+.video-control-btn {
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: opacity 0.2s ease;
+}
+
+.video-control-btn:hover {
+    opacity: 0.65;
+}
+
+
+/* =========================================
+   PLAY / PAUSE
+========================================= */
+
+.play-btn {
+    font-size: 19px;
+
+    width: 25px;
+}
+
+
+/* =========================================
+   TIME
+========================================= */
+
+.video-time {
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    min-width: 72px;
+
+    text-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================================
+   PROGRESS BAR
+========================================= */
+
+#videoProgress {
+    flex: 1;
+
+    height: 4px;
+
+    margin: 0 8px;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    background: rgba(255, 255, 255, 0.35);
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* BAR */
+
+#videoProgress::-webkit-slider-runnable-track {
+    height: 4px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    border-radius: 10px;
+}
+
+
+/* BULATAN */
+
+#videoProgress::-webkit-slider-thumb {
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    width: 10px;
+    height: 10px;
+
+    margin-top: -3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+/* FIREFOX */
+
+#videoProgress::-moz-range-track {
+    height: 4px;
+
+    background: rgba(255, 255, 255, 0.45);
+
+    border-radius: 10px;
+}
+
+#videoProgress::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+
+    background: white;
+
+    border: none;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   RIGHT BUTTONS
+========================================= */
+
+#muteBtn {
+    font-size: 18px;
+}
+
+.fullscreen-btn {
+    font-size: 22px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 576px) {
+
+    .video-controls {
+        height: 48px;
+
+        padding: 0 7px;
+
+        gap: 4px;
+    }
+
+    .video-time {
+        font-size: 12px;
+
+        min-width: 60px;
+    }
+
+    #videoProgress {
+        margin: 0 4px;
+    }
+
+    .video-control-btn {
+        width: 27px;
+        height: 27px;
+    }
+}
+
+/* =====================================
+   VEHICLE CAROUSEL FULL WIDTH
+===================================== */
+
+.vehicle-section {
+    width: 100%;
+    padding: 40px 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.vehicle-carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vehicle-track {
+    display: flex;
+    gap: 24px;
+
+    width: max-content;
+
+    padding-left: 3%;
+    padding-right: 3%;
+
+    transition: transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.vehicle-card {
+    position: relative;
+
+    flex: 0 0 70vw;
+    height: 550px;
+
+    overflow: hidden;
+    border-radius: 14px;
+
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.vehicle-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+.vehicle-card:hover > img {
+    transform: scale(1.04);
+}
+
+/* OVERLAY */
+
+.vehicle-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.15) 65%,
+            rgba(0, 0, 0, 0.05)
+        );  
+
+    pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.vehicle-info {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    padding: 50px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.vehicle-info h5 {
+    margin: 0;
+
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+.vehicle-info h2 {
+    margin: 0 0 8px;
+
+    font-size: 56px;
+    font-weight: 500;
+}
+
+
+.vehicle-info p {
+    margin: 0 0 25px;
+
+    font-size: 18px;
+}
+
+
+/* BUTTON */
+
+.vehicle-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+
+.vehicle-btn {
+    width: 175px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.vehicle-btn.blue {
+    background: #3e6ae1;
+    color: white;
+}
+
+
+.vehicle-btn.white {
+    background: white;
+    color: #171a20;
+}
+
+
+/* =====================================
+   ARROWS
+===================================== */
+
+.vehicle-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 24%;
+
+    background: rgba(255, 255, 255, 0.9);
+    color: #171a20;
+
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+    z-index: 10;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.vehicle-prev {
+    left: 25px;
+}
+
+.vehicle-next {
+    right: 25px;
+}
+
+
+/* =====================================
+   DOTS
+===================================== */
+
+.vehicle-dots {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 22px;
+}
+
+
+.vehicle-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #b5b5b5;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.vehicle-dot.active {
+    background: #171a20;
+
+    transform: scale(1.3);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 991px) {
+
+    .vehicle-card {
+        flex: 0 0 85%;
+        height: 550px;
+    }
+
+    .vehicle-info h2 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .vehicle-card {
+        flex: 0 0 100%;
+        height: 500px;
+    }
+
+    .vehicle-info {
+        padding: 25px;
+    }
+
+    .vehicle-info h2 {
+        font-size: 36px;
+    }
+
+    .vehicle-buttons {
+        flex-direction: column;
+    }
+
+    .vehicle-btn {
+        width: 100%;
+    }
+
+    .vehicle-prev {
+        left: 15px;
+    }
+
+    .vehicle-next {
+        right: 15px;
+    }
+}
+
+.cybertruck-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.cybertruck-logo {
+    position: absolute !important;
+
+    width: 300px !important;
+    max-width: 300px !important;
+    height: auto !important;
+
+    left: 50px;
+    bottom: 150px;
+
+    z-index: 10;
+
+    object-fit: contain;
+    display: block;
+}       
+
+.vehicle-specs {
+    display: flex;
+    gap: 35px;
+    margin: 22px 0 28px;
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.spec-icon {
+    font-size: 22px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eeeeee;
+    border-radius: 50%;
+}
+
+.spec-item div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.spec-item strong {
+    font-size: 20px;
+    font-weight: 600;
+    color: #171a20;
+}
+
+.spec-item span {
+    font-size: 13px;
+    color: #666;
+    margin-top: 3px;
+}

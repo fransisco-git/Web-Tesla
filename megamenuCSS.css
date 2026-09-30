@@ -1,0 +1,238 @@
+/* ==================================================
+   MEGA MENU (tambahan untuk WebTesla.css)
+================================================== */
+
+/* link navbar: highlight saat menu terbuka */
+.nav-menu a {
+    padding: 6px 14px;
+    border-radius: 6px;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-menu a.active {
+    background: #f4f4f4;
+    color: #171a20;
+}
+
+/* ---------- PANEL ---------- */
+.mega {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 64px;
+
+    background: #fff;
+    border-top: 1px solid #ececec;
+    box-shadow: 0 24px 40px rgba(0, 0, 0, 0.08);
+
+    padding: 34px 52px 44px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0s linear 0.25s;
+}
+
+.mega.open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.mega-panel {
+    display: none;
+    max-width: 1150px;
+    margin: 0 auto;
+    justify-content: center;
+    gap: 56px;
+}
+
+.mega-panel.active {
+    display: flex;
+}
+
+/* ---------- KARTU PRODUK ---------- */
+.mega-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    gap: 30px 26px;
+}
+
+.mega-card {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: #171a20;
+}
+
+.mega-card > a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.mega-thumb {
+    height: 80px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    background: #f1f2f4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mega-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.mega-card:hover .mega-thumb {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mega-card-links {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.mega-card-links a {
+    font-size: 12px;
+    font-weight: 500;
+    color: #5c5e62;
+    text-decoration: underline;
+}
+
+.mega-card-links a:hover {
+    color: #171a20;
+}
+
+/* ---------- DAFTAR LINK ---------- */
+.mega-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    min-width: 190px;
+    padding-left: 44px;
+    border-left: 1px solid #e6e6e6;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.mega-list.no-border {
+    border-left: 0;
+    padding-left: 0;
+    min-width: 170px;
+}
+
+.mega-list small {
+    font-size: 12px;
+    font-weight: 500;
+    color: #8a8c90;
+    margin-bottom: 4px;
+}
+
+.mega-list a {
+    color: #171a20;
+    text-decoration: none;
+}
+
+.mega-list a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- ANIMASI MASUK BERTAHAP ---------- */
+.mega-panel.active .mega-card,
+.mega-panel.active .mega-list a {
+    animation: megaRise 0.35s ease both;
+}
+
+.mega-panel.active .mega-card:nth-child(2),
+.mega-panel.active .mega-list a:nth-child(2) { animation-delay: 0.04s; }
+.mega-panel.active .mega-card:nth-child(3),
+.mega-panel.active .mega-list a:nth-child(3) { animation-delay: 0.08s; }
+.mega-panel.active .mega-card:nth-child(4),
+.mega-panel.active .mega-list a:nth-child(4) { animation-delay: 0.12s; }
+.mega-panel.active .mega-card:nth-child(n+5),
+.mega-panel.active .mega-list a:nth-child(n+5) { animation-delay: 0.16s; }
+
+@keyframes megaRise {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+}
+
+/* ---------- BACKDROP REDUP + BLUR ---------- */
+.mega-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;              /* di bawah navbar (1000) */
+
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.mega-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 991px) {
+    .mega {
+        padding: 24px 20px;
+        max-height: calc(100vh - 64px);
+        overflow-y: auto;
+    }
+
+    .mega-panel.active {
+        flex-direction: column;
+        gap: 26px;
+    }
+
+    .mega-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .mega-list {
+        border-left: 0;
+        padding-left: 0;
+        border-top: 1px solid #e6e6e6;
+        padding-top: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .mega, .mega-backdrop, .mega-thumb,
+    .mega-panel.active .mega-card,
+    .mega-panel.active .mega-list a {
+        animation: none !important;
+        transition: none !important;
+    }
+}
